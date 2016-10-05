@@ -13,7 +13,7 @@ class StyleguideServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        dd('Hey!');
+        // I'm doing nothing, but I'm doing it really well.
     }
 
     /**
