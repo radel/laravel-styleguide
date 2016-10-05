@@ -1,0 +1,12 @@
+{
+    "name": "radel/style-guide",
+    "description": "A living style guide package for laravel",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Marco Bonomo",
+            "email": "marco.bonomo@gmail.com"
+        }
+    ],
+    "require": {}
+}
