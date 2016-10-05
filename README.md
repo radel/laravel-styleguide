@@ -3,7 +3,7 @@
 #### what I want to do:
 
 I want to build an UI Pattern Library where one can develop a component in complete isolation. 
-This component is also a blade partial file and can be included in your app right away, thus achiving a real living style guide.
+This component is also a blade partial file and can be included in your app right away, thus achieving a real living style guide.
 
 Ideally, a change a in a component would be instantly reflected in your application.
 
