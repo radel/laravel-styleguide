@@ -3,6 +3,7 @@
 namespace Radel\StyleGuide;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
 
 class StyleguideServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,26 @@ class StyleguideServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // I'm doing nothing, but I'm doing it really well.
+         // use this if your package has views
+        $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'StyleGuide');
+        // use this if your package has routes
+        $this->setupRoutes($this->app->router);
+        $this->publishes([
+        __DIR__.'/resources/views/components/' => resource_path('/views/components/')
+    ], 'components');
+
+        $this->publishes([
+        __DIR__.'/resources/assets/' => public_path('/assets/styleguide/')
+    ], 'assets');
+
+    }
+
+    public function setupRoutes(Router $router)
+    {
+        $router->group(['namespace' => 'Radel\StyleGuide\Http\Controllers'], function($router)
+        {
+            require __DIR__.'/routes.php';
+        });
     }
 
     /**
