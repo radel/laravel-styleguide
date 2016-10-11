@@ -1,0 +1,1 @@
+@extends('StyleGuide::layouts.main')
