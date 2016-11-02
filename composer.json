@@ -8,5 +8,12 @@
             "email": "marco.bonomo@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "cebe/markdown": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Radel\\StyleGuide\\": "src/"
+        }
+    }
 }
